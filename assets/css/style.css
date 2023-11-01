@@ -11,6 +11,10 @@ body {
     font-family: "Poppins";
 }
 
+html, body {
+    scroll-behavior: smooth;
+}
+
 /* Common */
     :root {
         --primary-color: #0f1b4c;
@@ -40,6 +44,14 @@ body {
     }
 
 /* header */
+.fixed-header {
+    background-color: #E6F0FF;
+    padding-top: 26px;
+    position: sticky;
+    top: -26px;
+    z-index: 1;
+}
+
 .header {
     position: relative;
     background-color: #E6F0FF;
@@ -50,7 +62,8 @@ body {
 .navbar {
     display: flex;
     align-items: center;
-    padding-top: 38px;
+    /* padding-top: 38px; */ 
+    padding: 12px 0;
 }
 
 .navbar ul {
@@ -93,7 +106,9 @@ body {
 }
 
 .hero {
-    margin-top: 130px;
+    display: flex;
+    align-items: center;
+    height: calc(100vh - 90px);
     text-align: left;
 }
 
@@ -563,7 +578,7 @@ text-align: left;
 }
 
 .footer .item a,
-.desc {
+.footer .desc {
     white-space: nowrap;
     font-family: "Poppins";
     font-size: 1.6rem;
